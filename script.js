@@ -4,6 +4,7 @@ const audio = document.getElementById('musica');
 const canvas = document.getElementById('fogos');
 const ctx = canvas.getContext('2d');
 
+alert('chamou script')
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let particles = [];
