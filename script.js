@@ -3,11 +3,11 @@ const convite = document.getElementById('convite');
 const audio = document.getElementById('musica');
 const canvas = document.getElementById('fogos');
 const ctx = canvas.getContext('2d');
- 
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let particles = [];
- 
+
 function criarParticulas(x, y) {
   for (let i = 0; i < 50; i++) {
     particles.push({
@@ -21,7 +21,7 @@ function criarParticulas(x, y) {
     });
   }
 }
- 
+
 function animarParticulas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particles.forEach((p, i) => {
@@ -37,10 +37,11 @@ function animarParticulas() {
   });
   requestAnimationFrame(animarParticulas);
 }
- 
+
 animarParticulas();
- 
+
 carta.addEventListener('click', () => {
+  console.log('chamou evento')
   carta.style.display = 'none';
   convite.style.display = 'block';
   convite.classList.add('show');
